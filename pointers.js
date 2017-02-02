@@ -24,14 +24,14 @@
                    $('.' + el1).hide(); $('.' + el2).show();
                   };
             thatcontrol
-                  .append('<div class="arrowTop" style="position: fixed !important; top: 0px !important; left: 0px !important; width: 100%; z-index: 9999;">\n\
-                            <div id="headerView" style="padding-bottom: 5px;"></div>\n\
-                              <span style="display: block; z-index: 9999; position: inherit; left: '+settings.left+'px !important;" class="arrowIco arrowTopIco"></span>\n\
+                  .append('<div class="arrowTop">\n\
+                            <div id="headerView"></div>\n\
+                              <span class="arrowIco arrowTopIco"></span>\n\
                           </div>\n\
-                          <div class="arrowDown" style="position: fixed !important; bottom: ' +settings.margin+ 'px !important; left: ' +settings.left+ 'px !important; z-index: 9999;">\n\
-                            <span style="display: block; z-index: 9999; " class="arrowIco arrowDownIco"></span>\n\
-                          </div>');             
-    
+                          <div class="arrowDown">\n\
+                            <span class="arrowIco arrowDownIco"></span>\n\
+                          </div>');
+
         // DON'T apply solution for ul element with defined height
         if (thatcontrol.find('ul').height() < $(window).height() ) {
           $(document).off(EventList).on(EventList, function(){

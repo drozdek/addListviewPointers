@@ -23,15 +23,22 @@
                   toggleIndicators = function(el1, el2){
                    $('.' + el1).hide(); $('.' + el2).show();
                   };
-            thatcontrol
-                  .append('<div class="arrowTop">\n\
-                            <div id="headerView"></div>\n\
-                              <span class="arrowIco arrowTopIco"></span>\n\
-                          </div>\n\
-                          <div class="arrowDown">\n\
-                            <span class="arrowIco arrowDownIco"></span>\n\
-                          </div>');
 
+          thatcontrol
+              .prepend( $("<div>", {
+                    class: 'arrowTop',
+                  }).html($("<div>", {
+                      id: "headerView"
+                    })).append($("<span>", {
+                      class: "arrowIco arrowTopIco"
+                    })
+                )).append( $("<div>", {
+                      class: 'arrowDown',
+                    }).append($("<span>", {
+                        class: "arrowIco arrowDownIco"
+                    })
+                  ))
+    
         // DON'T apply solution for ul element with defined height
         if (thatcontrol.find('ul').height() < $(window).height() ) {
           $(document).off(EventList).on(EventList, function(){

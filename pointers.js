@@ -25,19 +25,19 @@
                   };
 
           thatcontrol
-              .prepend( $("<div>", {
-                    class: 'arrowTop',
+              .append( $("<div>", {
+                    class: 'arrowTop'
                   }).html($("<div>", {
                       id: "headerView"
                     })).append($("<span>", {
                       class: "arrowIco arrowTopIco"
                     })
                 )).append( $("<div>", {
-                      class: 'arrowDown',
-                    }).append($("<span>", {
+                      class: 'arrowDown'
+                    }).html($("<span>", {
                         class: "arrowIco arrowDownIco"
                     })
-                  ))
+                  ));
     
         // DON'T apply solution for ul element with defined height
         if (thatcontrol.find('ul').height() < $(window).height() ) {

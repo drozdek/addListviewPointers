@@ -12,19 +12,30 @@
 }
 
 .arrowTopIco {
-    background-image: url('images/arrow-top.svg');
-}
-
-.arrowDownIco {
-    background-image: url('images/arrow-down.svg');
+    background-image: url('../img/arrow-top.svg');
 }
 
 .arrowTop {
-    position: fixed;
     top: 0px;
     left: 0px;
     width: 100%;
     z-index: 9999;
+    position: fixed;
+}
+
+.arrowDownIco {
+    background-image: url('../img/arrow-down.svg');
+}
+
+.arrowDown {
+    z-index: 9999;
+}
+
+.arrowDown span {
+    display: block;
+    z-index: 9999;
+    position: fixed;    
+    bottom: 5px;        
 }
 
 #headerView {
@@ -37,12 +48,6 @@
     position: inherit;
 }
 
-.arrowDown {
-    position: fixed;
-    z-index: 9999;
-}
-
-.arrowDown span {
-    display: block;
-    z-index: 9999;
+#headerView .ui-btn{
+    margin: 0;
 }

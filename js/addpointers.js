@@ -6,10 +6,10 @@ $(document).ready(function () {
       EventList = 'scrollstart.SHOWBTTNS scroll.SHOWBTTNS',
       marginLeft = (that.width() / 2) - 25;
     var goDown = function () {
-        $(document).scrollTop(controlHeightWinHeight + 1);
+        $(document).scrollTop(controlHeightWinHeight);
       },
       goUp = function () {
-        $(document).scrollTop(elemPositionValue - 1);
+        $(document).scrollTop(elemPositionValue);
       },
         hideIndicators = function () {
           $('.arrowTop, .arrowDown').hide();
@@ -51,7 +51,7 @@ $(document).ready(function () {
       $('.arrowTop').hide();
       var firstElementClone = that.find('li').data('list-divider') ? that.find('li').data('list-divider').first().clone() : '';
       $(document).off(EventList).on(EventList, function () {
-        var controlScrollValue = $(document).scrollTop();
+        var controlScrollValue = $(document).scrollTop() + $('[data-role="header"]').height();
         /*
          *  component top
          */

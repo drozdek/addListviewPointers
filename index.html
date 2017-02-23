@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src * 'unsafe-inline';
+      img-src * data: content: 'unsafe-inline' 'unsafe-eval';
+      style-src * 'unsafe-inline';
+      script-src * 'unsafe-inline' 'unsafe-eval';
+      connect-src * 'unsafe-inline';
+      frame-src *;">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>    
+    <script src="js/jquery.mobile-1.4.5.min.map"></script>    
+    <script src="js/addpointers.js"></script>
+    <title>addListviewPointers</title>
+    <style>
+      li { height: 40px;}
+    </style>
+  </head>
+  <body>
+    <div data-role="page" id="two">
+      <div data-role="header">
+        <h3>addListviewPointers</h3>
+      </div>
+      <div data-role="content">
+        <ul data-role="listview" id="list" data-role="list-divider">
+          <li><a href="#">This is li no. 1</a></li>
+          <li><a href="#">This is li no. 2</a></li>
+          <li><a href="#">This is li no. 3</a></li>
+          <li><a href="#">This is li no. 4</a></li>
+          <li><a href="#">This is li no. 5</a></li>
+          <li><a href="#">This is li no. 6</a></li>
+          <li><a href="#">This is li no. 7</a></li>
+          <li><a href="#">This is li no. 8</a></li>
+          <li><a href="#">This is li no. 9</a></li>
+          <li><a href="#">This is li no. 10</a></li>
+          <li><a href="#">This is li no. 11</a></li>
+          <li><a href="#">This is li no. 12</a></li>
+          <li><a href="#">This is li no. 13</a></li>
+          <li><a href="#">This is li no. 14</a></li>
+          <li><a href="#">This is li no. 15</a></li>
+          <li><a href="#">This is li no. 16</a></li>
+          <li><a href="#">This is li no. 17</a></li>
+          <li><a href="#">This is li no. 17</a></li>
+          <li><a href="#">This is li no. 19</a></li>
+          <li><a href="#">This is li no. 20</a></li>
+          <li><a href="#">This is li no. 21</a></li>
+          <li><a href="#">This is li no. 22</a></li>
+          <li><a href="#">This is li no. 23</a></li>
+          <li><a href="#">This is li no. 24</a></li>
+          <li><a href="#">This is li no. 25</a></li>          
+          <li><a href="#">This is li no. 26</a></li>
+          <li><a href="#">This is li no. 27</a></li>
+          <li><a href="#">This is li no. 28</a></li>
+          <li><a href="#">This is li no. 29</a></li>
+          <li><a href="#">This is li no. 30</a></li>
+          <li><a href="#">This is li no. 31</a></li>
+          <li><a href="#">This is li no. 32</a></li>
+          <li><a href="#">This is li no. 33</a></li>
+          <li><a href="#">This is li no. 34</a></li>
+          <li><a href="#">This is li no. 35</a></li>
+          <li><a href="#">This is li no. 36</a></li>
+		  <li><a href="#">This is li no. 37</a></li>
+          <li><a href="#">This is li no. 38</a></li>
+          <li><a href="#">This is li no. 39</a></li>
+          <li><a href="#">This is li no. 40</a></li>    
+        </ul>
+        <script>
+          $(function () {
+            $('#list').addListviewPointers();
+          })
+        </script>
+      </div>
+    </div>
+    <div data-role="page" id="one">
+      <div data-role="content">
+        <a href="#two">get list</a>
+      </div>
+    </div>
+    <script type="text/javascript" src="cordova.js"></script>
+  </body>
+</html>

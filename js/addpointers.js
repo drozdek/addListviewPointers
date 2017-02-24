@@ -1,15 +1,15 @@
-$(document).ready(function () {
   $.fn.addListviewPointers = function () {
     var that = $(this);
-      elemPositionValue = that.offset().top,
-      controlHeightWinHeight = elemPositionValue + that.outerHeight() - $(window).height(),
-      EventList = 'scrollstart.SHOWBTTNS scroll.SHOWBTTNS',
+      elementPosition = that.offset().top,
       marginLeft = (that.width() / 2) - 25;
+      EventList = 'scrollstart.SHOWBTTNS scroll.SHOWBTTNS',
+      controlHeight = elementPosition + that.outerHeight() - $(window).height();      
+      
     var goDown = function () {
-        $(document).scrollTop(controlHeightWinHeight);
+        $(document).scrollTop(controlHeight);
       },
       goUp = function () {
-        $(document).scrollTop(elemPositionValue);
+        $(document).scrollTop(elementPosition);
       },
         hideIndicators = function () {
           $('.arrowTop, .arrowDown').hide();
@@ -55,14 +55,14 @@ $(document).ready(function () {
         /*
          *  component top
          */
-        if (controlScrollValue < elemPositionValue) {
+        if (controlScrollValue < elementPosition) {
           toggleIndicators('arrowTop', 'arrowDown');
         }
         /*
          *  component middle
          */
-        else if (controlScrollValue > elemPositionValue
-                                    && controlScrollValue < controlHeightWinHeight) {          
+        else if (controlScrollValue > elementPosition
+                                    && controlScrollValue < controlHeight) {          
         /*
          *  add first-child LI clone to DOM 
          */
@@ -71,8 +71,10 @@ $(document).ready(function () {
         }
           showIndicators();
         }
-        // component bottom
-        else if (controlScrollValue >= controlHeightWinHeight) {
+        /*
+         *  component bottom
+         */
+        else if (controlScrollValue >= controlHeight) {
           toggleIndicators('arrowDown', 'arrowTop');
         }
       });
@@ -84,4 +86,3 @@ $(document).ready(function () {
       goDown();
     });
   };
-});

@@ -9,7 +9,7 @@
         $(document).scrollTop(controlHeight);
       },
       goUp = function () {
-        $(document).scrollTop(elementPosition);
+        $(document).scrollTop(elementPosition - $('[data-role=header]').height());
       },
         hideIndicators = function () {
           $('.arrowTop, .arrowDown').hide();

@@ -1,3 +1,7 @@
+[data-role="listview"] {
+    overflow: hidden;
+}
+
 .arrowIco {
     opacity: .8;
     -ms-opacity: .8;
